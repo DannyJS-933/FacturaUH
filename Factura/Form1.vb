@@ -33,7 +33,14 @@ Public Class Form1
             ElseIf cantidad = 0 Then
                 MessageBox.Show("Error", "Cantidad articulos debe ser mayor a 0", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
+                'Acciones si todo esta bien defino el objeto Persona e instancio la clase
+                Dim objPersona As New Persona
+                Dim objArticulo As New articulo
+                objPersona.Nombre = nombre
+                objPersona.Codigo = codigoArticulo
+                objPersona.Fecha = fecha
 
+                'Agregar el objeto persona a una lista
 
 
 
@@ -44,4 +51,18 @@ Public Class Form1
         End Try
 
     End Sub
+
+    Private Sub cargarTabla()
+        Try
+            'Definir una tabla
+            Dim tabla As New DataTable
+            tabla.Columns.Add("Nombre")
+            tabla.Columns.Add("Codigo de Articulo")
+            tabla.Columns.Add("Fecha")
+
+        Catch ex As Exception
+            MessageBox.Show("Error", "Error: " + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
 End Class
