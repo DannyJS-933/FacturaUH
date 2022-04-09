@@ -119,7 +119,6 @@ Public Class Form1
                         writer.WriteEndElement()
                         'Cerramos el XML
                         writer.WriteEndDocument()
-
                     End Using
                 Else
                     MessageBox.Show("No selecciono una ruta valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
