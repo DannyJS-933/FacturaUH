@@ -47,6 +47,8 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btnSalvar = New System.Windows.Forms.Button()
         Me.DataGridViewFactura = New System.Windows.Forms.DataGridView()
+        Me.SaveFileDialogXML = New System.Windows.Forms.SaveFileDialog()
+        Me.btnExportXML = New System.Windows.Forms.Button()
         CType(Me.NumericUpDownCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewFactura, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,8 +257,17 @@ Partial Class Form1
         Me.DataGridViewFactura.Name = "DataGridViewFactura"
         Me.DataGridViewFactura.RowHeadersWidth = 82
         Me.DataGridViewFactura.RowTemplate.Height = 33
-        Me.DataGridViewFactura.Size = New System.Drawing.Size(853, 178)
+        Me.DataGridViewFactura.Size = New System.Drawing.Size(909, 178)
         Me.DataGridViewFactura.TabIndex = 24
+        '
+        'btnExportXML
+        '
+        Me.btnExportXML.Location = New System.Drawing.Point(972, 1024)
+        Me.btnExportXML.Name = "btnExportXML"
+        Me.btnExportXML.Size = New System.Drawing.Size(177, 65)
+        Me.btnExportXML.TabIndex = 25
+        Me.btnExportXML.Text = "Crear Factura"
+        Me.btnExportXML.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -264,6 +275,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(1250, 1158)
+        Me.Controls.Add(Me.btnExportXML)
         Me.Controls.Add(Me.DataGridViewFactura)
         Me.Controls.Add(Me.btnSalvar)
         Me.Controls.Add(Me.Label11)
@@ -324,4 +336,6 @@ Partial Class Form1
     Friend WithEvents Label11 As Label
     Friend WithEvents btnSalvar As Button
     Friend WithEvents DataGridViewFactura As DataGridView
+    Friend WithEvents SaveFileDialogXML As SaveFileDialog
+    Friend WithEvents btnExportXML As Button
 End Class
