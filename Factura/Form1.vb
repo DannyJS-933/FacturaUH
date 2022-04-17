@@ -11,6 +11,7 @@ Public Class Form1
             cbArticulo.Items.AddRange(dataArticulos)
             cbArticulo.SelectedIndex = 0
 
+
             cbPrecioArticulo.DropDownStyle = ComboBoxStyle.DropDownList
             cbPrecioArticulo.DataSource = dataPrecioArticulo
 
