@@ -25,7 +25,6 @@ Partial Class Form1
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.dtFecha = New System.Windows.Forms.DateTimePicker()
-        Me.txtCodigoArticulo = New System.Windows.Forms.TextBox()
         Me.cbArticulo = New System.Windows.Forms.ComboBox()
         Me.NumericUpDownCantidad = New System.Windows.Forms.NumericUpDown()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -43,12 +42,13 @@ Partial Class Form1
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txtPrecio = New System.Windows.Forms.MaskedTextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btnSalvar = New System.Windows.Forms.Button()
         Me.DataGridViewFactura = New System.Windows.Forms.DataGridView()
         Me.SaveFileDialogXML = New System.Windows.Forms.SaveFileDialog()
         Me.btnExportXML = New System.Windows.Forms.Button()
+        Me.cbCodigoArticulo = New System.Windows.Forms.ComboBox()
+        Me.cbPrecioArticulo = New System.Windows.Forms.ComboBox()
         CType(Me.NumericUpDownCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewFactura, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,50 +56,49 @@ Partial Class Form1
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(265, 56)
+        Me.txtName.Location = New System.Drawing.Point(264, 56)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(198, 31)
         Me.txtName.TabIndex = 0
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(265, 142)
+        Me.txtCodigo.Location = New System.Drawing.Point(264, 142)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(198, 31)
         Me.txtCodigo.TabIndex = 1
         '
         'dtFecha
         '
-        Me.dtFecha.Location = New System.Drawing.Point(265, 223)
+        Me.dtFecha.Location = New System.Drawing.Point(264, 223)
+        Me.dtFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.dtFecha.Name = "dtFecha"
         Me.dtFecha.Size = New System.Drawing.Size(198, 31)
         Me.dtFecha.TabIndex = 2
         '
-        'txtCodigoArticulo
-        '
-        Me.txtCodigoArticulo.Location = New System.Drawing.Point(303, 312)
-        Me.txtCodigoArticulo.Name = "txtCodigoArticulo"
-        Me.txtCodigoArticulo.Size = New System.Drawing.Size(160, 31)
-        Me.txtCodigoArticulo.TabIndex = 3
-        '
         'cbArticulo
         '
         Me.cbArticulo.FormattingEnabled = True
-        Me.cbArticulo.Location = New System.Drawing.Point(265, 398)
+        Me.cbArticulo.Location = New System.Drawing.Point(264, 398)
+        Me.cbArticulo.Margin = New System.Windows.Forms.Padding(4)
         Me.cbArticulo.Name = "cbArticulo"
         Me.cbArticulo.Size = New System.Drawing.Size(198, 33)
         Me.cbArticulo.TabIndex = 4
         '
         'NumericUpDownCantidad
         '
-        Me.NumericUpDownCantidad.Location = New System.Drawing.Point(265, 514)
+        Me.NumericUpDownCantidad.Location = New System.Drawing.Point(264, 513)
+        Me.NumericUpDownCantidad.Margin = New System.Windows.Forms.Padding(4)
         Me.NumericUpDownCantidad.Name = "NumericUpDownCantidad"
         Me.NumericUpDownCantidad.Size = New System.Drawing.Size(98, 31)
         Me.NumericUpDownCantidad.TabIndex = 5
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(905, 643)
+        Me.TextBox4.Location = New System.Drawing.Point(1040, 642)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(244, 31)
         Me.TextBox4.TabIndex = 6
@@ -107,7 +106,8 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(49, 56)
+        Me.Label1.Location = New System.Drawing.Point(48, 56)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 25)
         Me.Label1.TabIndex = 7
@@ -116,7 +116,8 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(49, 130)
+        Me.Label2.Location = New System.Drawing.Point(48, 131)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(80, 25)
         Me.Label2.TabIndex = 8
@@ -125,7 +126,8 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(49, 223)
+        Me.Label3.Location = New System.Drawing.Point(48, 223)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 25)
         Me.Label3.TabIndex = 9
@@ -134,7 +136,8 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(49, 312)
+        Me.Label4.Location = New System.Drawing.Point(48, 312)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(205, 25)
         Me.Label4.TabIndex = 10
@@ -143,7 +146,8 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(49, 406)
+        Me.Label5.Location = New System.Drawing.Point(48, 406)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(84, 25)
         Me.Label5.TabIndex = 11
@@ -152,7 +156,8 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(49, 504)
+        Me.Label6.Location = New System.Drawing.Point(48, 504)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(98, 25)
         Me.Label6.TabIndex = 12
@@ -161,7 +166,8 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(699, 649)
+        Me.Label7.Location = New System.Drawing.Point(700, 648)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(153, 25)
         Me.Label7.TabIndex = 13
@@ -169,7 +175,8 @@ Partial Class Form1
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(905, 734)
+        Me.TextBox5.Location = New System.Drawing.Point(1040, 735)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(244, 31)
         Me.TextBox5.TabIndex = 14
@@ -177,7 +184,8 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(699, 740)
+        Me.Label8.Location = New System.Drawing.Point(700, 740)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(123, 25)
         Me.Label8.TabIndex = 15
@@ -185,7 +193,8 @@ Partial Class Form1
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(1051, 827)
+        Me.TextBox6.Location = New System.Drawing.Point(1188, 827)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(98, 31)
         Me.TextBox6.TabIndex = 16
@@ -193,7 +202,8 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(699, 833)
+        Me.Label9.Location = New System.Drawing.Point(700, 833)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 25)
         Me.Label9.TabIndex = 17
@@ -201,7 +211,8 @@ Partial Class Form1
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(905, 914)
+        Me.TextBox7.Location = New System.Drawing.Point(1040, 917)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(244, 31)
         Me.TextBox7.TabIndex = 18
@@ -209,7 +220,8 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(699, 920)
+        Me.Label10.Location = New System.Drawing.Point(700, 919)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(137, 25)
         Me.Label10.TabIndex = 19
@@ -218,24 +230,19 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Factura.My.Resources.Resources._5f7f8ccf2b7a7189bbaf491e18f5fe34
-        Me.PictureBox1.Location = New System.Drawing.Point(704, 40)
+        Me.PictureBox1.Location = New System.Drawing.Point(792, 33)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(445, 537)
+        Me.PictureBox1.Size = New System.Drawing.Size(492, 537)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
-        'txtPrecio
-        '
-        Me.txtPrecio.Location = New System.Drawing.Point(265, 613)
-        Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(198, 31)
-        Me.txtPrecio.TabIndex = 21
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(49, 619)
+        Me.Label11.Location = New System.Drawing.Point(48, 619)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(151, 25)
         Me.Label11.TabIndex = 22
@@ -244,8 +251,9 @@ Partial Class Form1
         'btnSalvar
         '
         Me.btnSalvar.Location = New System.Drawing.Point(344, 690)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(119, 57)
+        Me.btnSalvar.Size = New System.Drawing.Size(120, 58)
         Me.btnSalvar.TabIndex = 23
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.UseVisualStyleBackColor = True
@@ -253,33 +261,52 @@ Partial Class Form1
         'DataGridViewFactura
         '
         Me.DataGridViewFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewFactura.Location = New System.Drawing.Point(23, 978)
+        Me.DataGridViewFactura.Location = New System.Drawing.Point(24, 979)
+        Me.DataGridViewFactura.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewFactura.Name = "DataGridViewFactura"
         Me.DataGridViewFactura.RowHeadersWidth = 82
         Me.DataGridViewFactura.RowTemplate.Height = 33
-        Me.DataGridViewFactura.Size = New System.Drawing.Size(909, 178)
+        Me.DataGridViewFactura.Size = New System.Drawing.Size(1108, 179)
         Me.DataGridViewFactura.TabIndex = 24
         '
         'btnExportXML
         '
-        Me.btnExportXML.Location = New System.Drawing.Point(972, 1024)
+        Me.btnExportXML.Location = New System.Drawing.Point(1164, 1081)
+        Me.btnExportXML.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExportXML.Name = "btnExportXML"
-        Me.btnExportXML.Size = New System.Drawing.Size(177, 65)
+        Me.btnExportXML.Size = New System.Drawing.Size(176, 65)
         Me.btnExportXML.TabIndex = 25
         Me.btnExportXML.Text = "Crear Factura"
         Me.btnExportXML.UseVisualStyleBackColor = True
+        '
+        'cbCodigoArticulo
+        '
+        Me.cbCodigoArticulo.FormattingEnabled = True
+        Me.cbCodigoArticulo.Location = New System.Drawing.Point(264, 303)
+        Me.cbCodigoArticulo.Name = "cbCodigoArticulo"
+        Me.cbCodigoArticulo.Size = New System.Drawing.Size(198, 33)
+        Me.cbCodigoArticulo.TabIndex = 26
+        '
+        'cbPrecioArticulo
+        '
+        Me.cbPrecioArticulo.FormattingEnabled = True
+        Me.cbPrecioArticulo.Location = New System.Drawing.Point(264, 619)
+        Me.cbPrecioArticulo.Name = "cbPrecioArticulo"
+        Me.cbPrecioArticulo.Size = New System.Drawing.Size(198, 33)
+        Me.cbPrecioArticulo.TabIndex = 27
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1250, 1158)
+        Me.ClientSize = New System.Drawing.Size(1672, 1125)
+        Me.Controls.Add(Me.cbPrecioArticulo)
+        Me.Controls.Add(Me.cbCodigoArticulo)
         Me.Controls.Add(Me.btnExportXML)
         Me.Controls.Add(Me.DataGridViewFactura)
         Me.Controls.Add(Me.btnSalvar)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TextBox7)
@@ -297,10 +324,10 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.NumericUpDownCantidad)
         Me.Controls.Add(Me.cbArticulo)
-        Me.Controls.Add(Me.txtCodigoArticulo)
         Me.Controls.Add(Me.dtFecha)
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.txtName)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.NumericUpDownCantidad, System.ComponentModel.ISupportInitialize).EndInit()
@@ -314,7 +341,6 @@ Partial Class Form1
     Friend WithEvents txtName As TextBox
     Friend WithEvents txtCodigo As TextBox
     Friend WithEvents dtFecha As DateTimePicker
-    Friend WithEvents txtCodigoArticulo As TextBox
     Friend WithEvents cbArticulo As ComboBox
     Friend WithEvents NumericUpDownCantidad As NumericUpDown
     Friend WithEvents TextBox4 As TextBox
@@ -332,10 +358,11 @@ Partial Class Form1
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents txtPrecio As MaskedTextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents btnSalvar As Button
     Friend WithEvents DataGridViewFactura As DataGridView
     Friend WithEvents SaveFileDialogXML As SaveFileDialog
     Friend WithEvents btnExportXML As Button
+    Friend WithEvents cbCodigoArticulo As ComboBox
+    Friend WithEvents cbPrecioArticulo As ComboBox
 End Class

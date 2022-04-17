@@ -4,6 +4,7 @@
     Private _codigoArticulo As String
     Private _precioArticulo As Integer
 
+
     Public Property Articulo As String
         Get
             Return _articulo
